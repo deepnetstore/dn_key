@@ -1,2 +1,8 @@
-![dn_key_topside_render]([PCB/imgs/topside-render.png](https://raw.githubusercontent.com/deepnetstore/dn_key/main/PCB/imgs/topside-render.png?token=GHSAT0AAAAAACDFC4LI42FR7BSND5X27OROZFZYSFQ)https://raw.githubusercontent.com/deepnetstore/dn_key/main/PCB/imgs/topside-render.png?token=GHSAT0AAAAAACDFC4LI42FR7BSND5X27OROZFZYSFQ | width=250)
-![dn_key_bottomside_render](PCB/imgs/bottomside-render.png)
+Front side:  
+<img src="https://github.com/deepnetstore/dn_key/blob/main/PCB/imgs/topside-render.png" width=400>
+
+Back side:  
+<img src="https://github.com/deepnetstore/dn_key/blob/main/PCB/imgs/bottomside-render.png" width=400>
+
+Back side Placements:  
+<img src="https://github.com/deepnetstore/dn_key/blob/main/PCB/imgs/bottomside-placements.png" width=400>
