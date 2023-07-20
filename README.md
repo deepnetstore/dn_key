@@ -1,4 +1,5 @@
-y# dn_key  
+# dn_key  
+#haxxd
 
 ## A repo for information about DEEPNET's USB HOODIE KEY  
 
