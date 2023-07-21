@@ -10,7 +10,6 @@ secrets = {
 }
 
 save it and try again...
-
 """
 
 import mdns
