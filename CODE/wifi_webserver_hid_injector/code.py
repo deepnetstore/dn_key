@@ -1,5 +1,17 @@
 from secrets import secrets
 
+"""
+You will need to create a secrets file called secrets.py
+add in your network information like so:
+
+secrets = {
+    'ssid': 'MYNETWORK',
+    'password': 'STRONGAFPW',
+}
+
+save it and try again...
+"""
+
 import mdns
 import microcontroller
 import time
@@ -33,8 +45,7 @@ touch2_pin.threshold = 13000
 
 pixel_pin = board.EYES
 num_pixels = 2
-pixels = neopixel.NeoPixel(pixel_pin, num_pixels,
-                           brightness=0.05, auto_write=False)
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.05, auto_write=False)
 pixels.fill(LOW_RED)
 pixels.show()
 
@@ -54,8 +65,10 @@ print("My MAC addr:", [hex(i) for i in wifi.radio.mac_address])
 
 print("Available WiFi networks:")
 for network in wifi.radio.start_scanning_networks():
-    print("\t%s\t\tRSSI: %d\tChannel: %d" %
-          (str(network.ssid, "utf-8"), network.rssi, network.channel))
+    print(
+        "\t%s\t\tRSSI: %d\tChannel: %d"
+        % (str(network.ssid, "utf-8"), network.rssi, network.channel)
+    )
 wifi.radio.stop_scanning_networks()
 
 time.sleep(1)
@@ -137,9 +150,7 @@ def index(data):
     )
 
 
-pages = {
-    "index": index
-}
+pages = {"index": index}
 
 
 def page_render(pagename, data):
@@ -166,6 +177,7 @@ def base(request: HTTPRequest):
     }
     with HTTPResponse(request, content_type=MIMEType.TYPE_HTML) as response:
         response.send(page_render(pagename="index", data=data))
+
 
 #  if a button is pressed on the site
 
