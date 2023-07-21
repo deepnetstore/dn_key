@@ -1,0 +1,3 @@
+Adafruit CircuitPython 8.0.0-beta.4-72-ga50b0a2a5-dirty on 2023-03-15; DEEPNET - ESP32S2 HOODIE USBKEY with ESP32S2
+Board ID:deepnet_esp32s2_hoodie_usbkey
+UID:4D9FD886912B

@@ -1,0 +1,24 @@
+REM starting the thing,
+REM comment from script
+GUI SPACE
+DELAY 800 
+STRING notes.app
+ENTER
+DELAY 800
+GUI n 
+ENTER
+DELAY 80
+ENTER
+DELAY 80
+STRING DEEPNET DEEPNET DEEPNET DEEPNET DEEPNET DEEPNET 
+ENTER
+DELAY 80
+STRING  $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $
+ENTER
+DELAY 80
+STRING DEEPNET DEEPNET DEEPNET DEEPNET DEEPNET DEEPNET 
+ENTER
+DELAY 80
+STRINGLN hope this part works... 
+STRINGLN this will tell... 
+STRINGLN ALL should be on another line... 
