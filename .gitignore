@@ -1,0 +1,11 @@
+*/.DS_Store
+*.DS_Store
+.DS_Store
+PCB/.DS_Store
+*/secrets.py
+*secrets.py
+secrets.py
+
+*/boot_out.txt
+*boot_out.txt
+boot_out.txt
