@@ -1,7 +1,7 @@
 # dn_key  
 #haxxd
 
-([DEEPNET.STORE](https://deepnet.store))
+([DEEPNET.STORE](https://deepnet.store/pages/dn_key))
 
 ## Features
 * ESP32-S2FN4R2 - WiFi capable device
