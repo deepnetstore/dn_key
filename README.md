@@ -22,11 +22,11 @@
 ## Example code
 * ([USB HID Mouse Jiggler](github.....))
 
-## ⚠️ Attention:
+## :warning: Attention:
 If you purchased a DN_Key from the Deepnet Team before Auguest 18th, 2023, you MUST update CircuitPython in order to properly save any edited code. Unfortunately, a bug was found in our edits to the CircuitPython build that forced the code.py file to be over writen when the DN_Key was booted. This may have resulted in any code you wrote being lost entirely. We sincerly appologize for this mistake and hope you patch this issue asap.
-The update is extremely simple.
+The update is extremely simple, see below:
 
-## Update CircuitPython
+### Update CircuitPython
 * Step 1:  
     * Download the `dn_key_circuitpython_20230820_FIX.uf2` file from the DEEPNET github: [https://github.com/deepnetstore/dn_key]
 * Step 2:  
