@@ -30,8 +30,8 @@
 * ([USB HID Mouse Jiggler](github.....))
 
 ## :warning: Attention:
-If you purchased a DN_Key prior to August 18th, 2023, you MUST update the CircuitPython build in order to properly save any edited code. Unfortunately, a bug was found in our edits to the CircuitPython build that forced the code.py file to be overwritten upon intial boot of the DN_Key. This may have resulted in any code you wrote being lost entirely. We sincerly appologize for this mistake and hope you patch this issue asap.
-The update is extremely simple, see below:
+If you purchased a DN_Key prior to August 18th, 2023, you MUST update the CircuitPython build in order to properly save any edited code. Unfortunately, a bug was found in our edits to the CircuitPython build that forced the code.py file to be overwritten upon intial boot of the DN_Key. This may have resulted in any code you wrote being lost entirely. We sincerely appologize for this mistake and hope you patch this issue asap.
+The update is very simple, please see below:
 
 ### Update CircuitPython
 * Step 1:  
