@@ -30,7 +30,7 @@ The update is extremely simple.
 * Step 1:  
     * Download the `dn_key_circuitpython_20230820_FIX.uf2` file from the DEEPNET github: [https://github.com/deepnetstore/dn_key]
 * Step 2:  
-    * Double tap the Reset button on the back side of your DN_Key. Besure to get the timing right so that "DN_BOOT" shows up as a drive on your computer. If you have any issues with timing, try to press the Reset button the second time after the DN_Key Eyes have turned purple. Along with the "DN_BOOT" drive appearing, the eye LEDs will turn Solid Green if successful. (If the eyes are 'breathing/fading in-out' the original sketch is still running, try step 2 again.)
+    * Double tap the Reset button on the back side of your DN_Key. Besure to get the timing right so that `DN_BOOT` shows up as a drive on your computer. If you have any issues with timing, try to press the Reset button the second time after the DN_Key Eyes have turned purple. Along with the `DN_BOOT` drive appearing, the eye LEDs will turn Solid Green if successful. (If the eyes are 'breathing/fading in-out' the original sketch is still running, try step 2 again.)
 * Step 3:  
     * Drag and drop the `dn_key_circuitpython_20230820_FIX.uf2` file into the `DN_BOOT` drive and let the file upload completely. Once the file is fully uploaded, the DN_Key will automatically reboot itself and the updated CircuitPython build will now be installed. You will see `DEEPNET-PY` appear as a mounted drive again.  
 * Step 4:  
