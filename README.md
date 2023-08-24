@@ -28,7 +28,7 @@ The update is extremely simple.
 
 ## Update CircuitPython
 * Step 1:  
-    * Download the `dn_key_circuitpython_20230820_FIX.uf2` file from the DEEPNET github: ([https://github.com/deepnetstore/dn_key])(https://github.com/deepnetstore/dn_key)  
+    * Download the `dn_key_circuitpython_20230820_FIX.uf2` file from the DEEPNET github: [https://github.com/deepnetstore/dn_key]
 * Step 2:  
     * Double tap the Reset button on the back side of your DN_Key. Besure to get the timing right so that "DN_BOOT" shows up as a drive on your computer. If you have any issues with timing, try to press the Reset button the second time after the DN_Key Eyes have turned purple. Along with the "DN_BOOT" drive appearing, the eye LEDs will turn Solid Green if successful. (If the eyes are 'breathing/fading in-out' the original sketch is still running, try step 2 again.)
 * Step 3:  
