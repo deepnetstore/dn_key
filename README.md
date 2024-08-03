@@ -42,3 +42,4 @@ The update is very simple, please see below:
     * Drag and drop the `dn_key_circuitpython_20230820_FIX.uf2` file into the `DN_BOOT` drive and let the file upload completely. Once the file is fully uploaded, the DN_Key will automatically reboot itself and the updated CircuitPython build will now be installed. You will see `DEEPNET-PY` appear as a mounted drive again.  
 * Step 4:  
     * Verify the new build is working by editing some code in `code.py`, save the file, eject your `DEEPNET-PY` drive, unplug the DN_Key and then reinsert the DN_Key so the `DEEPNET-PY` drive appears once again. Open `code.py` and see if your changes remained. If the changes you made are not saved, try again starting at Step 2.
+# Temporary change
