@@ -1,3 +1,4 @@
+# This code sample is a simple mouse jiggler but spaz version, play with the random movement values!
 import time
 import asyncio
 import math
@@ -12,7 +13,8 @@ from adafruit_hid.mouse import Mouse
 
 touch1_pin = touchio.TouchIn(board.TOUCH1)
 touch2_pin = touchio.TouchIn(board.TOUCH2)
-touch2_pin.threshold = 23000
+# touch2_pin.threshold = 55000 #Long Press
+touch2_pin.threshold = 23000 # Tap 
 
 pixel_pin = board.EYES
 num_pixels = 2
