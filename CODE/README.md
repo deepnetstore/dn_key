@@ -14,7 +14,6 @@ While our focus is on the newer ESP32-S3 variant, there are still some **dn_key 
 Your dn_key device comes with:
 
 - **`code.py` file**: The primary script that defines the device's behavior. This file can be replaced or modified to adjust functionality.
-- **Pre-installed libraries**: Essential libraries for HID emulation, Wi-Fi functionality, NeoPixel control, and more are already loaded onto the device in the `lib/` folder.
 
 ## Getting Started with CircuitPython
 
