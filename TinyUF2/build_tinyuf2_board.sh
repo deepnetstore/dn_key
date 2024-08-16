@@ -1,10 +1,19 @@
-# start at root of CircuitPython build folders
+#
+# TinyUF2 build and flash script
+# writen by 0x0630ff
+# 2024/08/16
+# for http://DEEPNET.STORE
+#
+# Note:
+# Start at root of CircuitPython build folders
+# you will need about 2.1GB of space on your drive
 # 
 # ATTENTION!
 # Before running this script, 
 # press and hold the boot button on the dn_key,
 # then while holding the boot button down, 
 # press and release the reset button.
+#
 
 # remove any old espressif files to avoid conflicts
 rm -rf ~/.espressif
