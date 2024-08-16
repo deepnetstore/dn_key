@@ -7,7 +7,6 @@
 # The LED eyes on the device provide varied visual feedback for Wi-Fi status, touch inputs, and web requests.
 # Check the feedback in the serial monitor for debugging!
 
-
 import time
 import board
 import random
@@ -424,6 +423,7 @@ async def main_loop():
 # Start the WiFi AP
 if start_wifi_ap():
     print("WiFi AP started successfully.")
+    print("dn_controls web page @ http://192.168.4.1")
 else:
     print("WiFi AP failed to start.")
     while True:
