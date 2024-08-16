@@ -50,13 +50,14 @@ cp -r ../../../../boards/deepnet_key_s3/ boards/deepnet_key_s3/
 
 # now do all the make steps, clean first, then build. (fullclean is optional but helpful)  
 make BOARD=$TARGET_BOARD fullclean
-make BOARD=deepnet_key_s3 all
-make BOARD=deepnet_key_s3 flash
+make BOARD=$TARGET_BOARD all
+make BOARD=$TARGET_BOARD flash
 
 echo "
 Press reset on the DN_Key to start up with the newly flashed bootloader
 then run this command:
 cp ../../../../../dn_key_s3_circuitpython_20240803.uf2 /Volumes/DN_BOOT
+* Note: replace the .uf2 file with the proper file for your device.
 "
 
 echo "** FINISHED!! **"
