@@ -1,6 +1,6 @@
 # How to reflash your DN_Key
 
-Use this guide if the memory has been erased or factory reset on your DN_Key_S3
+Use this guide if the memory has been erased or factory reset on your DN_Key_S2 or DN_Key_S3.  
 
 - Clone this repo into your prefered location.  
 - `cd` into the `TinyUF2` directory.  
