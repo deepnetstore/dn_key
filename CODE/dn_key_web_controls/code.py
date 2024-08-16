@@ -1,8 +1,12 @@
-# This code creates a Wi-Fi access point named "dn_key" and serves a webpage that lets users trigger various actions.
-# The actions can be triggered by the two touch pins or by pressing buttons on the webpage.
-# One action runs a terminal command (e.g., cmatrix), another opens a specified webpage in Safari (iOS, macOS), another triggers a fire effect on the LED eyes, another toggles a mouse jiggler, and so on :)
+# This code creates a Wi-Fi access point (AP) named "dn_key" and serves a webpage that lets users trigger various actions.
+# The AP's default IP address will be 192.168.4.1, which is automatically assigned by the firmware.
+# Devices connected to the AP can access the web server via this IP address.
+# The actions can be triggered by two touch pins or by pressing buttons on the webpage.
+# One action runs a terminal command (e.g., cmatrix), another opens a specified webpage in Safari (iOS, macOS),
+# another triggers a fire effect on the LED eyes, another toggles a mouse jiggler, and so on :)
 # The LED eyes on the device provide varied visual feedback for Wi-Fi status, touch inputs, and web requests.
 # Check the feedback in the serial monitor for debugging!
+
 
 import time
 import board
@@ -257,7 +261,7 @@ Content-Type: text/html
 """
     elif path.startswith("/fire"):
         print("Web request to trigger fire effect")
-        fire_effect(5)
+        fire_effect(5) # Set the timing of the fire effect here (5) seconds for example
         response = """\
 HTTP/1.1 200 OK
 Content-Type: text/html
