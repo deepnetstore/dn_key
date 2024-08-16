@@ -15,6 +15,8 @@
 # press and release the reset button.
 #
 
+TARGET_BOARD=$1
+
 # remove any old espressif files to avoid conflicts
 rm -rf ~/.espressif
 
@@ -29,7 +31,7 @@ git clone -b v5.1.1 --recursive https://github.com/espressif/esp-idf.git esp-idf
 cd esp-idf-v5.1.1
 
 # install esp-idf
-./install.sh esp32s3 #,esp32s2  # add or remove other esp chips as needed
+./install.sh esp32s3,esp32s2  # add or remove other esp chips as needed
 
 # then export to use in the current terminal
 . ./export.sh
@@ -46,8 +48,8 @@ cd tinyuf2/ports/espressif
 # copy over the board files required to build tinyuf2
 cp -r ../../../../boards/deepnet_key_s3/ boards/deepnet_key_s3/
 
-# now do all the make steps, clean first, then build. (fullclean is optional but helpful)
-make BOARD=deepnet_key_s3 fullclean
+# now do all the make steps, clean first, then build. (fullclean is optional but helpful)  
+make BOARD=$TARGET_BOARD fullclean
 make BOARD=deepnet_key_s3 all
 make BOARD=deepnet_key_s3 flash
 
