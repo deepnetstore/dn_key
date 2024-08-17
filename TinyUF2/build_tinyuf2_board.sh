@@ -17,8 +17,10 @@
 
 TARGET_BOARD=$1
 
+echo $TARGET_BOARD
+
 # TODO: Improve this check by comparing string to the folder names in the dn_key/TinyUF2/boards directory.
-if [[ "$TARGET_BOARD" == "deepent_key_s2" || "$TARGET_BOARD" == "deepent_key_s3" ]]; then
+if [[ "$TARGET_BOARD" == "deepnet_key_s2" || "$TARGET_BOARD" == "deepnet_key_s3" ]]; then
     echo "YEP! THATS A DEEPNET BOARD! Let's Go!"
 else
     echo "Wrong board name, please check your agument uses the correct board name."
@@ -54,7 +56,7 @@ git clone https://github.com/adafruit/tinyuf2.git --recurse-submodules
 cd tinyuf2/ports/espressif
 
 # copy over the board files required to build tinyuf2
-cp -r ../../../../boards/deepnet_key_s3/ boards/deepnet_key_s3/
+cp -r ../../../../boards/$TARGET_BOARD/ boards/$TARGET_BOARD/
 
 # now do all the make steps, clean first, then build. (fullclean is optional but helpful)  
 make BOARD=$TARGET_BOARD fullclean
