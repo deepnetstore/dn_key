@@ -4,6 +4,12 @@ Use this guide if the memory has been erased or factory reset on your DN_Key_S2 
 
 - Clone this repo into your prefered location.  
 - `cd` into the `TinyUF2` directory.  
-- run the build and install script: `./build_tinyuf2_board.sh deepnet_key_#` (Replace the `#` symbol with your target board. eg S2 or S3)  
-- wait
+- Press and Hold the Boot button. 
+- While holding the Boot button, press and release the Reset button.
+- Run the build and install script: `./build_tinyuf2_board.sh deepnet_key_#` (Replace the `#` symbol with your target board. eg S2 or S3)  
+- Wait...
 - H4XX 7h3 w0r1d.  
+
+
+
+
