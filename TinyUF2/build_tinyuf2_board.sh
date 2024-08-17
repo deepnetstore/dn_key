@@ -17,6 +17,14 @@
 
 TARGET_BOARD=$1
 
+# TODO: Improve this check by comparing string to the folder names in the dn_key/TinyUF2/boards directory.
+if [[ "$TARGET_BOARD" == "deepent_key_s2" || "$TARGET_BOARD" == "deepent_key_s3" ]]; then
+    echo "YEP! THATS A DEEPNET BOARD! Let's Go!"
+else
+    echo "Wrong board name, please check your agument uses the correct board name."
+    exit 1
+fi
+
 # remove any old espressif files to avoid conflicts
 rm -rf ~/.espressif
 
