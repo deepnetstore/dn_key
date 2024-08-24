@@ -55,5 +55,24 @@ This project is licensed under the MIT License.
 ## Support and Contributions
 For questions or contributions, open an issue or submit a pull request on our [GitHub repository](https://github.com/deepnetstore/dn_key).
 
+## Disclaimer
+
+This device is intended **solely for educational purposes** and **security research** by responsible professionals and enthusiasts. As blue team engineers, we are dedicated to improving security awareness, resilience, and ethical practices.
+
+While this device is capable of emulating human interface devices (HID) like keyboards and mice, allowing it to execute commands on connected systems, **it must never be used for malicious purposes**. **We do not support, condone, or provide examples of any illegal activities**, including unauthorized access, data exfiltration, or any form of hacking that compromises the privacy and security of individuals or organizations.
+
+### **By using this device, you agree to the following:**
+- You will only use the device in compliance with all applicable laws and regulations.
+- You will obtain proper authorization before using the device in any environment where it may affect systems or data that you do not own or control.
+- You acknowledge that improper use of this device can result in legal consequences, and **you assume full responsibility for any actions performed with the device**.
+
+We strongly encourage users to adhere to ethical standards and **only use this device for legitimate purposes** such as testing your own systems, enhancing security defenses, or contributing to the cybersecurity community.
+
+### **Liability**
+We, the creators, will not be held responsible for any damages, legal issues, or liabilities resulting from the use or misuse of this device. By using this device, you agree to accept full responsibility for any actions you take.
+
+Remember: **With great power comes great responsibility**. Let's work together to build a safer digital world.
+
+
 
 
