@@ -17,11 +17,9 @@
 
 TARGET_BOARD=$1
 
-echo $TARGET_BOARD
-
 # TODO: Improve this check by comparing string to the folder names in the dn_key/TinyUF2/boards directory.
 if [[ "$TARGET_BOARD" == "deepnet_key_s2" || "$TARGET_BOARD" == "deepnet_key_s3" ]]; then
-    echo "YEP! THATS A DEEPNET BOARD! Let's Go!"
+    echo "Building TinyUF2 for $TARGET_BOARD \n YEP! THATS A DEEPNET BOARD! Let's Go!"
 else
     echo "Wrong board name, please check your agument uses the correct board name."
     exit 1
@@ -31,8 +29,16 @@ fi
 rm -rf ~/.espressif
 
 # change over to a temporary directory
-mkdir temp
-cd temp
+temp_dir_name="_temp"
+if [ -d "$temp_dir_name" ]; then
+    rm -rf $temp_dir_name
+fi
+
+
+exit 1
+
+mkdir $temp_dir_name
+cd $temp_dir_name
 
 # grab the specific release required.
 git clone -b v5.1.1 --recursive https://github.com/espressif/esp-idf.git esp-idf-v5.1.1

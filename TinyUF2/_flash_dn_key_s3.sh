@@ -1,0 +1,1 @@
+esptool.py --chip esp32s3 -p /dev/ttyUSB0  -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x8000 build/partition-table.bin 0xe000 build/ota_data_initial.bin 0x0 build/bootloader.bin 0x410000 build/tinyuf2.bin
