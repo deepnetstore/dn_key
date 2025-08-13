@@ -28,12 +28,15 @@ When you plug the dn_key into your computer, it will mount as a drive:
 
 You can replace the `code.py` file on the device with one of the examples provided in the repository. Some examples include:
 
-- **`dn_web_controls/`**: Sets up a web server hosted by the device, allowing control over HID and other functions via a webpage.
+- **`dn_key_basic_web_controls/`**: Sets up a basic web server hosted by the device, allowing control over HID and other functions via a webpage.
+- **`dn_key_web_controls_os/`**: Advanced OS-specific web controls with comprehensive functionality for macOS, Windows, and Linux.
 - **`dn_key_hid_mouse_jiggler/`**: Focuses on keeping the system active by periodically moving the mouse to prevent the system from going idle.
 
 Once you update the `code.py` file, the device will automatically restart and run the new code.
 
-## Web Controls Example (`dn_web_controls/`)
+## Web Controls Examples
+
+### Basic Web Controls (`dn_key_basic_web_controls/`)
 
 This example enables the dn_key to create a Wi-Fi access point, allowing you to connect and interact via a webpage. The details are:
 
@@ -46,6 +49,20 @@ Once connected, you can open your browser and navigate to `http://192.168.4.1` t
 - Opening a webpage in Safari.
 - Triggering LED effects with the NeoPixel.
 - Toggling HID functions such as mouse jiggling.
+
+### Advanced OS-Specific Web Controls (`dn_key_web_controls_os/`)
+
+This comprehensive example provides OS-specific controls for macOS, Windows, and Linux with advanced functionality:
+
+- **SSID**: `dn_key`
+- **Password**: `12345678`
+- **Web Interface**: `http://192.168.4.1`
+
+Features include:
+- OS-specific keyboard shortcuts and commands
+- Volume controls, media playback, system functions
+- Advanced mouse controls and automation
+- Professional web interface with OS selection
 
 ## Advanced Usage with Arduino
 
