@@ -20,13 +20,8 @@ A CircuitPython script for the DN-KEY ESP32-S3 device that automatically detects
 
 ## Installation
 
-1. Install CircuitPython on your DN-KEY device
-2. Copy the required libraries to the `lib` folder:
-   - `adafruit_hid`
-   - `neopixel`
-   - `touchio`
-3. Upload the script as `code.py` to the device
-4. Connect the device to your target computer via USB
+1. Upload the script as `code.py` to the device
+2. Connect the device to your target computer via USB
 
 ## How It Works
 
