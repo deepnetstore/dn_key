@@ -31,6 +31,7 @@ You can replace the `code.py` file on the device with one of the examples provid
 - **`dn_key_basic_web_controls/`**: Sets up a basic web server hosted by the device, allowing control over HID and other functions via a webpage.
 - **`dn_key_web_controls_os/`**: Advanced OS-specific web controls with comprehensive functionality for macOS, Windows, and Linux.
 - **`dn_key_hid_mouse_jiggler/`**: Focuses on keeping the system active by periodically moving the mouse to prevent the system from going idle.
+- **`dn_key_firefly_swarm/`**: A multiplayer light game - flash it onto several keys, power them from battery banks, and their eyes sync into blinking together over ESP-NOW. Touch the face to send a wave across the room, touch the laptop to change everyone's color.
 
 Once you update the `code.py` file, the device will automatically restart and run the new code.
 

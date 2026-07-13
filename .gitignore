@@ -9,3 +9,6 @@ secrets.py
 */boot_out.txt
 *boot_out.txt
 boot_out.txt
+
+__pycache__/
+*.pyc
