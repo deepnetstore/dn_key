@@ -1,6 +1,11 @@
 # dn_key
 
-**haxxd** - a tiny ESP32 hacker in a hoodie that runs CircuitPython.
+### haxxd
+
+A pocket ESP32 offensive-security tool that runs CircuitPython, shaped like a
+hooded hacker at a laptop. HID keyboard and mouse injection, wifi and Bluetooth
+radios, and a control panel it hosts in your own browser. Every bit of it is
+reprogrammable by editing one file on the drive.
 
 [DEEPNET.STORE](https://deepnet.store/pages/dn_key)
 
