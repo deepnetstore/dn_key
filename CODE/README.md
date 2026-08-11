@@ -1,105 +1,118 @@
-# dn_key - ESP32-Based HID IoT Device
+# dn_key sample code
 
-**dn_key** is an ESP32-S3-based HID IoT device designed for automating tasks like HID (keyboard/mouse) emulation, web-based control, and more. With built-in Wi-Fi and Bluetooth, the dn_key offers robust connectivity and control. The device comes pre-loaded with CircuitPython, making it easy to modify behavior by updating the `code.py` file.
+**dn_key** is an ESP32-based HID IoT device that ships with CircuitPython. It
+does keyboard/mouse emulation, hosts its own web control panel, and talks to
+other keys over the air. To change what it does, drop a new `code.py` on the
+drive and it reboots into it.
 
-While our focus is on the newer ESP32-S3 variant, there are still some **dn_key (ESP32-S2)** devices in circulation, which only support Wi-Fi. Both devices are pre-loaded with CircuitPython and essential libraries, ready to use right out of the box.
+Every folder here is a self-contained sample. Copy its `code.py` (and any `lib/`
+next to it) onto the key and go. The catalog below is the quick tour.
 
-## Device Variants
+## Samples
 
-- **dn_key (ESP32-S3)**: The latest version, featuring both Wi-Fi and Bluetooth. It mounts as **`DN-S3-PY`** when connected to a computer.
-- **dn_key (ESP32-S2)**: An earlier version that only supports Wi-Fi. It mounts as **`DEEPNET-PY`** when connected. Though no longer in production, support remains available for this variant.
+### Games and swarm (key to key, no computer needed)
 
-## Preloaded Features
+Power the key off a battery bank and it does its own thing and talks to other
+keys over ESP-NOW. No wifi to join, no pairing.
 
-Your dn_key device comes with:
+- **`dn_key_firefly_swarm/`** - flash it on a pile of keys and their eyes drift
+  into blinking together like fireflies. Touch the face to send a white wave
+  across the room, touch the laptop to change everyone's color.
 
-- **`code.py` file**: The primary script that defines the device's behavior. This file can be replaced or modified to adjust functionality.
+### HID (plug into a computer, act as a keyboard/mouse)
 
-## Getting Started with CircuitPython
+- **`dn_key_hid_mouse_jiggler/`** - keeps a machine awake with gentle mouse
+  nudges. Touch a pad to toggle it.
+- **`dn_key_hid_mouse_jiggler_spaz/`** - same idea, cranked. Fast, random,
+  chaotic movement for when subtle is not the point.
+- **`dn_key_hid_duckyscript/`** - runs DuckyScript keystroke payloads from the
+  `HID_CMD*.txt` files. Edit the scripts, pick one with a touch pad.
+- **`dn_key_macOS_terminal/`** - opens Terminal on macOS and runs `cmatrix`.
+- **`dn_key_safari_url/`** - opens Safari through Spotlight and navigates to a
+  URL. Works on macOS and iOS.
 
-### Accessing the Device
+### Web control (the key makes its own wifi, you drive it from a browser)
 
-When you plug the dn_key into your computer, it will mount as a drive:
+Connect to the key's access point, open `http://192.168.4.1`, and control it
+from any phone or laptop.
 
-- **ESP32-S3**: The drive will be named **`DN-S3-PY`**.
-- **ESP32-S2**: The drive will be named **`DEEPNET-PY`**.
+- **`dn_key_basic_web_controls/`** - a simple page to fire terminal commands,
+  LED effects, and the jiggler. SSID `dn_key`, password `12345678`.
+- **`dn_key_web_controls_os/`** - the advanced panel with OS-specific controls
+  for macOS, Windows, and Linux (shortcuts, media keys, mouse automation).
+- **`dn_key_simple_mouse_jiggler_web/`** - the 2025 sample: a mouse jiggler with
+  a clean web toggle and a breathing LED. Good starting point to learn from.
+- **`wifi_webserver_hid_injector/`** - joins *your* wifi instead of hosting its
+  own, then serves a page to fire HID payloads. Needs a `secrets.py` with your
+  network info (see the sample header).
 
-### Replacing the `code.py` File
+> Adding a sample? Add a one-line entry to this list in the same commit.
 
-You can replace the `code.py` file on the device with one of the examples provided in the repository. Some examples include:
+## Device variants
 
-- **`dn_key_basic_web_controls/`**: Sets up a basic web server hosted by the device, allowing control over HID and other functions via a webpage.
-- **`dn_key_web_controls_os/`**: Advanced OS-specific web controls with comprehensive functionality for macOS, Windows, and Linux.
-- **`dn_key_hid_mouse_jiggler/`**: Focuses on keeping the system active by periodically moving the mouse to prevent the system from going idle.
-- **`dn_key_firefly_swarm/`**: A multiplayer light game - flash it onto several keys, power them from battery banks, and their eyes sync into blinking together over ESP-NOW. Touch the face to send a wave across the room, touch the laptop to change everyone's color.
+- **dn_key (ESP32-S3)**: the current version, wifi and bluetooth. Mounts as
+  **`DN-S3-PY`**.
+- **dn_key (ESP32-S2)**: an earlier wifi-only version, no longer in production
+  but still supported. Mounts as **`DEEPNET-PY`**.
 
-Once you update the `code.py` file, the device will automatically restart and run the new code.
+## Getting started
 
-## Web Controls Examples
+1. Plug the key in. It mounts as `DN-S3-PY` (S3) or `DEEPNET-PY` (S2).
+2. Copy a sample's `code.py` onto the drive, along with any `lib/` folder next
+   to it.
+3. The key reboots and runs the new code. Edit `code.py` in place to tweak it.
+4. Use a serial monitor to watch device output while you work (see the
+   `helpers/` folder for a persistent monitor script).
 
-### Basic Web Controls (`dn_key_basic_web_controls/`)
+## Web controls detail
 
-This example enables the dn_key to create a Wi-Fi access point, allowing you to connect and interact via a webpage. The details are:
+### Basic (`dn_key_basic_web_controls/`)
+
+Creates a wifi access point and serves a control page.
 
 - **SSID**: `dn_key`
 - **Password**: `12345678`
+- **Web interface**: `http://192.168.4.1`
 
-Once connected, you can open your browser and navigate to `http://192.168.4.1` to interact with the device through the web interface. Available actions include:
+Actions include running terminal commands like `cmatrix`, opening a page in
+Safari, triggering LED effects on the eyes, and toggling the mouse jiggler.
 
-- Running terminal commands like `cmatrix`.
-- Opening a webpage in Safari.
-- Triggering LED effects with the NeoPixel.
-- Toggling HID functions such as mouse jiggling.
+### Advanced OS-specific (`dn_key_web_controls_os/`)
 
-### Advanced OS-Specific Web Controls (`dn_key_web_controls_os/`)
+Same connection details, with a fuller panel:
 
-This comprehensive example provides OS-specific controls for macOS, Windows, and Linux with advanced functionality:
+- OS-specific keyboard shortcuts and commands (macOS, Windows, Linux)
+- Volume and media playback controls, system functions
+- Mouse controls and automation
+- Web interface with OS selection
 
-- **SSID**: `dn_key`
-- **Password**: `12345678`
-- **Web Interface**: `http://192.168.4.1`
+## Arduino
 
-Features include:
-- OS-specific keyboard shortcuts and commands
-- Volume controls, media playback, system functions
-- Advanced mouse controls and automation
-- Professional web interface with OS selection
+The key can also be flashed from the Arduino IDE for lower-level work like
+DuckyScript keystroke injection, similar to a Rubber Ducky.
 
-## Advanced Usage with Arduino
+1. **Install the Arduino IDE**: https://www.arduino.cc/en/software
+2. **Add the ESP32 core**: in Preferences, add this under "Additional Boards
+   Manager URLs":
 
-The dn_key can also be programmed using the Arduino IDE for more advanced functionality like **DuckyScript** for keystroke injection, similar to devices like the Rubber Ducky.
+   `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
 
-### Arduino Setup
+3. **Select your board**: Tools > Board > ESP32S3 (or ESP32S2).
+4. **Install libraries**: `Keyboard`, `Mouse`, and `WiFi`.
 
-1. **Download the Arduino IDE**: [Get the Arduino IDE here](https://www.arduino.cc/en/software).
-2. **Install ESP32 Core**: Go to **Preferences** in the Arduino IDE, and add this URL under "Additional Boards Manager URLs":
-
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-
-3. **Select Your Board**:
-- For ESP32-S3, select **Tools > Board > ESP32S3**.
-- For ESP32-S2, select **Tools > Board > ESP32S2**.
-
-4. **Install Required Libraries**: Install the `Keyboard`, `Mouse`, and `WiFi` libraries to support HID and networking tasks.
-
-### DuckyScript Example:
-
-Here’s a simple Arduino sketch to run keystrokes:
+A minimal keystroke sketch:
 
 ```cpp
 #include <Keyboard.h>
 
 void setup() {
- Keyboard.begin();
- delay(1000);
- Keyboard.print("Hello, World!");
- Keyboard.releaseAll();
+  Keyboard.begin();
+  delay(1000);
+  Keyboard.print("Hello, World!");
+  Keyboard.releaseAll();
 }
 
 void loop() {
- // Additional automation logic here
+  // more automation here
 }
-
-
-
-
+```
